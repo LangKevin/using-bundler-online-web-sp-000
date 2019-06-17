@@ -40,12 +40,7 @@ describe "Bundler" do
 
     # http://bundler.io/git.html
     it "should list the awesome_print gem specifying a remote git repository (use github)" do
-
-      str = /gem ['"]awesome_print['"], ?(git:|:git ?=>) ?['"]git@github\.com:awesome\-print\/awesome_print\.git['"]/
-# binding.pry
-# gem "awesome_print", :git => 'https://github.com/awesome-print/awesome_print.git/'
-      # expect(@gemfile_text =~ /gem ['"]awesome_print['"], ?(git:|:git ?=>) ?['"]git@github\.com:awesome\-print\/awesome_print\.git['"]/).not_to eq(nil)
-      expect(@gemfile_text =~ /gem ['"]awesome_print['"], ?(git:|:git ?=>) ?['"]https\:\//github\.com:awesome\-print\/awesome_print\.git['"]/).not_to eq(nil)
+      expect(@gemfile_text =~ /gem ['"]awesome_print['"], ?(git:|:git ?=>) ?['"]git@github\.com:awesome\-print\/awesome_print\.git['"]/).not_to eq(nil)
     end
 
     describe "groups" do
